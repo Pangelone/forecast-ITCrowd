@@ -1,9 +1,10 @@
-import React from "react";
-import { StyleSheet, View, Text, ActivityIndicator } from "react-native";
-import { Overlay } from "react-native-elements";
+import React from "react"
+import { StyleSheet, View, Text, ActivityIndicator } from "react-native"
+import { Overlay } from "react-native-elements"
 
 export default function Loading(props) {
-    const { isVisible, text } = props;
+
+    const { isVisible, text } = props
 
     return (
         <Overlay
@@ -17,7 +18,7 @@ export default function Loading(props) {
                 {text && <Text style={styles.text}>{text}</Text>}
             </View>
         </Overlay>
-    );
+    )
 }
 
 const styles = StyleSheet.create({
@@ -39,4 +40,4 @@ const styles = StyleSheet.create({
         textTransform: "uppercase",
         marginTop: 10,
     },
-});
+})

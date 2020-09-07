@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react"
 import Navigation from "./app/navigations/Navigation"
-import AsyncStorage from '@react-native-community/async-storage'
+import AsyncStorage from "@react-native-community/async-storage"
 
 export default function App() {
 
@@ -14,7 +14,7 @@ export default function App() {
         global.StoreApiDataArray = []
       }
     } catch (e) {
-      alert('Failed to fetch the data from storage')
+      alert("Failed to fetch the data from storage")
     }
   }
 
@@ -24,5 +24,5 @@ export default function App() {
 
   return (
     <Navigation />
-  );
+  )
 }

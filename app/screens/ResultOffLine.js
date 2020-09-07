@@ -1,8 +1,9 @@
-import React from "react";
+import React from "react"
 import { StyleSheet, View, Text } from "react-native"
-import MapView from 'react-native-maps';
+import MapView from "react-native-maps"
 
 export default function ResultOffLine(props) {
+
     const ApiData = props.route.params.ApiData
 
     return (
@@ -43,9 +44,9 @@ export default function ResultOffLine(props) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
+        backgroundColor: "#fff",
+        alignItems: "center",
+        justifyContent: "center",
     },
     mapStyle: {
         width: 400,
@@ -67,4 +68,4 @@ const styles = StyleSheet.create({
         fontSize: 30,
         lineHeight: 30
     }
-});
+})

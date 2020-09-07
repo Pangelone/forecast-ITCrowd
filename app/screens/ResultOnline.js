@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from "react"
 import { StyleSheet, View, Text } from "react-native"
-import MapView from 'react-native-maps';
-import AsyncStorage from '@react-native-community/async-storage'
+import MapView from "react-native-maps"
+import AsyncStorage from "@react-native-community/async-storage"
 
 export default function ResultOnline(props) {
 
@@ -25,9 +25,9 @@ export default function ResultOnline(props) {
     const setLocalStorage = async () => {
         try {
             await AsyncStorage.setItem("StoreApiData", JSON.stringify(global.StoreApiDataArray))
-            console.log('Data successfully saved')
+            console.log("Data successfully saved")
         } catch (e) {
-            alert('Failed to save the data to the storage')
+            alert("Failed to save the data to the storage")
         }
     }
 
@@ -73,9 +73,9 @@ export default function ResultOnline(props) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
+        backgroundColor: "#fff",
+        alignItems: "center",
+        justifyContent: "center",
     },
     mapStyle: {
         width: 400,
@@ -97,4 +97,4 @@ const styles = StyleSheet.create({
         fontSize: 30,
         lineHeight: 30
     }
-});
+})

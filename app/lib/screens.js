@@ -1,7 +1,8 @@
-import React from "react";
+import React from "react"
 import { Icon } from "react-native-elements"
 
 export default function screenOptions(route, color) {
+
     let iconName
 
     switch (route.name) {
