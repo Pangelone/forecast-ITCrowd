@@ -1,21 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useEffect } from 'react';
+import Navigation from "./app/navigations/Navigation"
+import AsyncStorage from '@react-native-community/async-storage'
 
 export default function App() {
+
+  const getLocalStorage = async () => {
+    try {
+      const Item = await AsyncStorage.getItem("StoreApiData")
+
+      if (Item !== null) {
+        global.StoreApiDataArray = JSON.parse(Item)
+      } else {
+        global.StoreApiDataArray = []
+      }
+    } catch (e) {
+      alert('Failed to fetch the data from storage')
+    }
+  }
+
+  useEffect(() => {
+    getLocalStorage()
+  }, [])
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Navigation />
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
